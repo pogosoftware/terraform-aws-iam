@@ -75,3 +75,48 @@ variable "iam_role_inline_policy" {
     policy = string
   })
 }
+
+##########################################################################
+### iam_policy
+##########################################################################
+variable "create_iam_policy" {
+  default     = true
+  description = "Determinate to create `iam_policy` resources or not"
+  type        = bool
+}
+
+variable "iam_policy" {
+  default     = null
+  description = "Required if `create_iam_policy` is set to `true`. The policy document. This is a JSON formatted string"
+  type        = string
+}
+
+variable "iam_policy_description" {
+  default     = null
+  description = "Description of the IAM policy"
+  type        = string
+}
+
+variable "iam_policy_name" {
+  default     = null
+  description = "The name of the policy. If omitted, Terraform will assign a random, unique name"
+  type        = string
+}
+
+variable "use_iam_policy_name_prefix" {
+  default     = false
+  description = "Determinate to use `name_prefix` or not"
+  type        = bool
+}
+
+variable "iam_policy_path" {
+  default     = null
+  description = "Path in which to create the policy"
+  type        = string
+}
+
+variable "iam_policy_tags" {
+  default     = null
+  description = "Map of resource tags for the IAM Policy"
+  type        = map(string)
+}

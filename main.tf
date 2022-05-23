@@ -16,3 +16,17 @@ module "iam_role" {
   tags                  = var.iam_role_tags
   inline_policy         = var.iam_role_inline_policy
 }
+
+module "iam_policy" {
+  source = "./modules/iam_policy"
+
+  count = var.create_iam_policy ? 1 : 0
+
+  policy = var.iam_policy
+
+  description = var.iam_policy_description
+  name        = local.iam_policy_name
+  name_prefix = local.iam_policy_name_prefix
+  path        = var.iam_policy_path
+  tags        = var.iam_policy_tags
+}
