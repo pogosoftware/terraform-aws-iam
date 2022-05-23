@@ -120,3 +120,17 @@ variable "iam_policy_tags" {
   description = "Map of resource tags for the IAM Policy"
   type        = map(string)
 }
+
+##########################################################################
+### iam_role_policy_attachment
+##########################################################################
+variable "create_iam_role_policy_attachment" {
+  default     = true
+  description = "Determinate to create `iam_role_policy_attachment` resources or not"
+  type        = bool
+}
+variable "iam_policy_arn" {
+  default     = null
+  description = "Required if `create_iam_role_policy_attachment` is set to `true` and `create_iam_role_policy_attachment` is set to false. The ARN of the policy you want to apply"
+  type        = string
+}

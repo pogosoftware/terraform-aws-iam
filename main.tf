@@ -30,3 +30,12 @@ module "iam_policy" {
   path        = var.iam_policy_path
   tags        = var.iam_policy_tags
 }
+
+module "iam_role_policy_attachment" {
+  source = "./modules/iam_role_policy_attachment"
+
+  count = var.create_iam_role_policy_attachment ? 1 : 0
+
+  role       = local.iam_role_policy_attachment_role
+  policy_arn = local.iam_role_policy_attachment_policy_arn
+}
