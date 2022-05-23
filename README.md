@@ -17,6 +17,7 @@ No providers.
 |------|--------|---------|
 | <a name="module_iam_policy"></a> [iam\_policy](#module\_iam\_policy) | ./modules/iam_policy | n/a |
 | <a name="module_iam_role"></a> [iam\_role](#module\_iam\_role) | ./modules/iam_role | n/a |
+| <a name="module_iam_role_policy_attachment"></a> [iam\_role\_policy\_attachment](#module\_iam\_role\_policy\_attachment) | ./modules/iam_role_policy_attachment | n/a |
 
 ## Resources
 
@@ -28,7 +29,9 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_create_iam_policy"></a> [create\_iam\_policy](#input\_create\_iam\_policy) | Determinate to create `iam_policy` resources or not | `bool` | `true` | no |
 | <a name="input_create_iam_role"></a> [create\_iam\_role](#input\_create\_iam\_role) | Determinate to create `iam_role` resources or not | `bool` | `true` | no |
+| <a name="input_create_iam_role_policy_attachment"></a> [create\_iam\_role\_policy\_attachment](#input\_create\_iam\_role\_policy\_attachment) | Determinate to create `iam_role_policy_attachment` resources or not | `bool` | `true` | no |
 | <a name="input_iam_policy"></a> [iam\_policy](#input\_iam\_policy) | Required if `create_iam_policy` is set to `true`. The policy document. This is a JSON formatted string | `string` | `null` | no |
+| <a name="input_iam_policy_arn"></a> [iam\_policy\_arn](#input\_iam\_policy\_arn) | Required if `create_iam_role_policy_attachment` is set to `true` and `create_iam_role_policy_attachment` is set to false. The ARN of the policy you want to apply | `string` | `null` | no |
 | <a name="input_iam_policy_description"></a> [iam\_policy\_description](#input\_iam\_policy\_description) | Description of the IAM policy | `string` | `null` | no |
 | <a name="input_iam_policy_name"></a> [iam\_policy\_name](#input\_iam\_policy\_name) | The name of the policy. If omitted, Terraform will assign a random, unique name | `string` | `null` | no |
 | <a name="input_iam_policy_path"></a> [iam\_policy\_path](#input\_iam\_policy\_path) | Path in which to create the policy | `string` | `null` | no |
