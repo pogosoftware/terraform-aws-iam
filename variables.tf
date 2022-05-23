@@ -2,7 +2,7 @@
 ### iam_role
 ##########################################################################
 variable "create_iam_role" {
-  default     = true
+  default     = false
   description = "Determinate to create `iam_role` resources or not"
   type        = bool
 }
@@ -80,7 +80,7 @@ variable "iam_role_inline_policy" {
 ### iam_policy
 ##########################################################################
 variable "create_iam_policy" {
-  default     = true
+  default     = false
   description = "Determinate to create `iam_policy` resources or not"
   type        = bool
 }
@@ -125,7 +125,7 @@ variable "iam_policy_tags" {
 ### iam_role_policy_attachment
 ##########################################################################
 variable "create_iam_role_policy_attachment" {
-  default     = true
+  default     = false
   description = "Determinate to create `iam_role_policy_attachment` resources or not"
   type        = bool
 }
