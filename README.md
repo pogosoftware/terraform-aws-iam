@@ -27,9 +27,9 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_create_iam_policy"></a> [create\_iam\_policy](#input\_create\_iam\_policy) | Determinate to create `iam_policy` resources or not | `bool` | `true` | no |
-| <a name="input_create_iam_role"></a> [create\_iam\_role](#input\_create\_iam\_role) | Determinate to create `iam_role` resources or not | `bool` | `true` | no |
-| <a name="input_create_iam_role_policy_attachment"></a> [create\_iam\_role\_policy\_attachment](#input\_create\_iam\_role\_policy\_attachment) | Determinate to create `iam_role_policy_attachment` resources or not | `bool` | `true` | no |
+| <a name="input_create_iam_policy"></a> [create\_iam\_policy](#input\_create\_iam\_policy) | Determinate to create `iam_policy` resources or not | `bool` | `false` | no |
+| <a name="input_create_iam_role"></a> [create\_iam\_role](#input\_create\_iam\_role) | Determinate to create `iam_role` resources or not | `bool` | `false` | no |
+| <a name="input_create_iam_role_policy_attachment"></a> [create\_iam\_role\_policy\_attachment](#input\_create\_iam\_role\_policy\_attachment) | Determinate to create `iam_role_policy_attachment` resources or not | `bool` | `false` | no |
 | <a name="input_iam_policy"></a> [iam\_policy](#input\_iam\_policy) | Required if `create_iam_policy` is set to `true`. The policy document. This is a JSON formatted string | `string` | `null` | no |
 | <a name="input_iam_policy_arn"></a> [iam\_policy\_arn](#input\_iam\_policy\_arn) | Required if `create_iam_role_policy_attachment` is set to `true` and `create_iam_role_policy_attachment` is set to false. The ARN of the policy you want to apply | `string` | `null` | no |
 | <a name="input_iam_policy_description"></a> [iam\_policy\_description](#input\_iam\_policy\_description) | Description of the IAM policy | `string` | `null` | no |
